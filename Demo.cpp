@@ -9,16 +9,22 @@
 #include <fstream>
 #include <sstream>
 #include <stdexcept>
-#include <stdio.h>
 using namespace std;
 
 #include "sources/Fraction.hpp"
-
+#include <limits>
 using namespace ariel;
 
 
 int main() {
+    int max_int = std::numeric_limits<int>::max();
+    int min_int = std::numeric_limits<int>::min();
+    cout<< min_int*-1<<endl;
+    Fraction f6(min_int, 1);
+    Fraction f1(max_int, 1);
+    f1 - f6;
     Fraction a(5,3), b(14,21);
+
     cout << "a: " << a << "b: " << b << endl;
     cout << "a+b" << a+b << endl; 
     cout << "a-b" << a-b << endl; 
